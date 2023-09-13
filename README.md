@@ -29,7 +29,7 @@ npm install -g jiggle-genius
 Run Jiggle Genius with a custom duration (default is 30 minutes):
 
 ```bash
-jiggly --duration 60
+npm run jiggle --duration 30
 ```
 
 ## Contributing
@@ -41,5 +41,3 @@ Found a bug or have an idea for improvement? Contributions are welcome! Please o
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 **Keep your computer awake with Jiggle Genius!**
-
----
