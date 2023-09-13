@@ -3,12 +3,10 @@
   "version": "1.0.0",
   "description": "Jiggle Genius is a simple and efficient mouse jiggler CLI tool designed to keep your computer awake during those times when you need it to stay active. Whether you're preventing your screen from locking during a presentation or keeping your online status active, Jiggle Genius has got you covered.",
   "main": "index.js",
-  "bin": {
-    "jiggly": "index.js"
-  },
   "scripts": {
     "test": "jest",
-    "run": "node dist/index.js --d"
+    "run": "node dist/index.js",
+    "jiggle": "node dist/index.js"
   },
   "repository": {
     "type": "git",
