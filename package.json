@@ -1,0 +1,35 @@
+{
+  "name": "jiggle-genius",
+  "version": "1.0.0",
+  "description": "Jiggle Genius is a simple and efficient mouse jiggler CLI tool designed to keep your computer awake during those times when you need it to stay active. Whether you're preventing your screen from locking during a presentation or keeping your online status active, Jiggle Genius has got you covered.",
+  "main": "index.js",
+  "bin": {
+    "jiggly": "index.js"
+  },
+  "scripts": {
+    "test": "jest",
+    "run": "node dist/index.js --d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegodscamara/jiggle-genius.git"
+  },
+  "keywords": [
+    "mouse",
+    "jiggler"
+  ],
+  "author": "Diego Camara <diegodscamara@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diegodscamara/jiggle-genius/issues"
+  },
+  "homepage": "https://github.com/diegodscamara/jiggle-genius#readme",
+  "dependencies": {
+    "jest": "^29.7.0",
+    "robotjs": "^0.6.0",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}
