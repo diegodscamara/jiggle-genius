@@ -7,7 +7,7 @@ A simple and efficient mouse jiggler CLI tool designed to keep your computer awa
 - 🎯 Smooth circular mouse movement pattern
 - ⚙️ Configurable duration, radius, and speed
 - 🎮 Easy to use CLI interface
-- 💻 Cross-plaLinux)tform support (Windows, macOS, 
+- 💻 Cross-platform support (Windows, macOS,Linux) 
 - 🛑 Graceful shutdown with Ctrl+C
 
 ## Installation
