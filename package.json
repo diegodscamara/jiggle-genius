@@ -4,17 +4,25 @@
   "description": "Jiggle Genius is a simple and efficient mouse jiggler CLI tool designed to keep your computer awake during those times when you need it to stay active. Whether you're preventing your screen from locking during a presentation or keeping your online status active, Jiggle Genius has got you covered.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "packageManager": "pnpm@10.5.0",
   "bin": {
     "jiggle": "dist/index.js"
   },
   "scripts": {
     "build": "tsc",
-    "prepare": "npm run build",
+    "prepare": "pnpm run build",
     "start": "node dist/index.js",
-    "dev": "ts-node index.ts",
+    "dev": "ts-node src/index.ts",
     "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "lint": "eslint . --ext .ts",
-    "clean": "rimraf dist"
+    "lint:fix": "eslint . --ext .ts --fix",
+    "clean": "rimraf dist",
+    "prebuild": "pnpm run clean",
+    "predev": "pnpm run build",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "check-types": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
@@ -40,18 +48,25 @@
   "devDependencies": {
     "@types/jest": "^29.5.0",
     "@types/node": "^18.15.0",
-    "@types/robotjs": "^0.6.0",
     "@types/yargs": "^17.0.24",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
     "eslint": "^8.35.0",
+    "eslint-config-prettier": "^10.1.1",
     "jest": "^29.7.0",
+    "prettier": "^3.5.3",
     "rimraf": "^5.0.0",
     "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": "^18.20.7",
+    "pnpm": ">=10.5.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "robotjs"
+    ]
   }
 }

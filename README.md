@@ -7,21 +7,49 @@ A simple and efficient mouse jiggler CLI tool designed to keep your computer awa
 - 🎯 Smooth circular mouse movement pattern
 - ⚙️ Configurable duration, radius, and speed
 - 🎮 Easy to use CLI interface
-- 💻 Cross-platform support (Windows, macOS,Linux) 
+- 💻 Cross-platform support (Windows, macOS, Linux) 
 - 🛑 Graceful shutdown with Ctrl+C
 
 ## Installation
 
 ### Global Installation (Recommended)
 
+Using pnpm (recommended):
 ```bash
+# First ensure you're using Node.js v18
+nvm use 18
+
+# Then install globally
+pnpm add -g jiggle-genius
+```
+
+Using npm:
+```bash
+nvm use 18  # Required for robotjs compatibility
 npm install -g jiggle-genius
+```
+
+Using yarn:
+```bash
+nvm use 18  # Required for robotjs compatibility
+yarn global add jiggle-genius
 ```
 
 ### Local Installation
 
+Using npm:
 ```bash
 npm install jiggle-genius
+```
+
+Using yarn:
+```bash
+yarn add jiggle-genius
+```
+
+Using pnpm:
+```bash
+pnpm add jiggle-genius
 ```
 
 ## Usage
@@ -76,8 +104,19 @@ jiggleGenius({
 
 ## Requirements
 
-- Node.js >= 14.0.0
-- npm >= 6.0.0
+- Node.js v18.20.7 (required for robotjs compatibility)
+  ```bash
+  # Using nvm (recommended)
+  nvm install 18
+  nvm use 18
+  
+  # Verify version
+  node -v  # Should show v18.20.7
+  ```
+- One of the following package managers:
+  - pnpm >= 10.5.0 (recommended)
+  - npm >= 6.0.0
+  - yarn >= 1.22.0
 
 ## Building from Source
 
@@ -87,14 +126,28 @@ git clone https://github.com/diegodscamara/jiggle-genius.git
 cd jiggle-genius
 ```
 
-2. Install dependencies:
+2. Install dependencies (choose one):
 ```bash
+# Using npm
 npm install
+
+# Using yarn
+yarn install
+
+# Using pnpm (recommended)
+pnpm install
 ```
 
 3. Build the project:
 ```bash
+# Using npm
 npm run build
+
+# Using yarn
+yarn build
+
+# Using pnpm (recommended)
+pnpm build
 ```
 
 ## Contributing

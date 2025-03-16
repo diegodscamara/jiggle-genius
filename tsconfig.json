@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    "target": "ES2018",
-    "module": "CommonJS",
-    "lib": ["ES2018"],
+    "target": "ES2020",
+    "module": "commonjs",
+    "lib": ["ES2020", "DOM"],
     "declaration": true,
     "outDir": "./dist",
-    "rootDir": "./",
+    "rootDir": "./src",
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
@@ -23,11 +23,13 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "typeRoots": ["./src/types", "./node_modules/@types"]
   },
   "include": [
-    "*.ts",
-    "src/**/*.ts"
+    "src/**/*",
+    "src/**/*.ts",
+    "src/**/*.d.ts"
   ],
   "exclude": [
     "node_modules",
