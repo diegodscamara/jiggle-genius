@@ -1,6 +1,29 @@
 # Jiggle Genius 🖱️
 
+[![npm version](https://img.shields.io/npm/v/jiggle-genius.svg)](https://www.npmjs.com/package/jiggle-genius)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Node Version](https://img.shields.io/badge/node-18.20.7-brightgreen.svg)](https://nodejs.org/en/)
+[![Downloads](https://img.shields.io/npm/dm/jiggle-genius.svg)](https://www.npmjs.com/package/jiggle-genius)
+
 A simple and efficient mouse jiggler CLI tool designed to keep your computer awake. Whether you're preventing your screen from locking during a presentation or keeping your online status active, Jiggle Genius has got you covered.
+
+## Table of Contents
+
+- [Features](#features)
+- [Installation](#installation)
+  - [Global Installation](#global-installation-recommended)
+  - [Local Installation](#local-installation)
+- [Usage](#usage)
+  - [Command Line Interface](#command-line-interface)
+  - [Examples](#examples)
+  - [Programmatic Usage](#programmatic-usage)
+- [Requirements](#requirements)
+- [Building from Source](#building-from-source)
+- [Troubleshooting](#troubleshooting)
+- [Contributing](#contributing)
+- [License](#license)
+- [Author](#author)
+- [Support](#support)
 
 ## Features
 
@@ -150,9 +173,87 @@ yarn build
 pnpm build
 ```
 
+## Troubleshooting
+
+### Common Issues
+
+#### Node.js Version Mismatch
+
+If you see errors related to `robotjs` or native dependencies:
+```bash
+Error: The module was compiled against a different Node.js version
+```
+
+Solution:
+1. Switch to Node.js v18.20.7:
+```bash
+nvm install 18.20.7
+nvm use 18.20.7
+```
+2. Reinstall the package:
+```bash
+npm uninstall -g jiggle-genius
+npm install -g jiggle-genius
+```
+
+#### Permission Issues (Linux/macOS)
+
+If you encounter permission errors:
+```bash
+Error: EACCES: permission denied
+```
+
+Solution:
+```bash
+# Using npm
+sudo npm install -g jiggle-genius
+
+# Using pnpm
+sudo pnpm add -g jiggle-genius
+```
+
+#### Other Issues
+
+- Make sure you have the latest version of your package manager
+- Clear your package manager's cache if needed:
+  ```bash
+  npm cache clean --force
+  # or
+  pnpm store prune
+  ```
+- Check the [GitHub issues](https://github.com/diegodscamara/jiggle-genius/issues) for similar problems and solutions
+
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+We welcome contributions to Jiggle Genius! Here's how you can help:
+
+### Bug Reports & Feature Requests
+
+- Use the [GitHub issue tracker](https://github.com/diegodscamara/jiggle-genius/issues) to report bugs or suggest features.
+- Before creating a new issue, please check if a similar issue already exists.
+- When reporting bugs, include:
+  - Node.js version (`node -v`)
+  - Operating system and version
+  - Steps to reproduce the issue
+  - Expected vs actual behavior
+
+### Pull Requests
+
+1. Fork the repository
+2. Create a new branch: `git checkout -b feature/your-feature-name`
+3. Make your changes
+4. Run tests: `pnpm test`
+5. Commit your changes: `git commit -m 'Add some feature'`
+6. Push to the branch: `git push origin feature/your-feature-name`
+7. Submit a pull request
+
+### Development Guidelines
+
+- Follow the existing code style
+- Add tests for new features
+- Update documentation as needed
+- Keep commits atomic and write clear commit messages
+- Ensure all tests pass before submitting a pull request
 
 ## License
 
@@ -164,6 +265,16 @@ Diego Camara ([@diegodscamara](https://github.com/diegodscamara))
 
 ## Support
 
-If you encounter any issues or have questions, please [open an issue](https://github.com/diegodscamara/jiggle-genius/issues) on GitHub.
+### Getting Help
 
-**Keep your computer awake with Jiggle Genius!**
+- **Issues**: If you encounter any issues or have questions, please [open an issue](https://github.com/diegodscamara/jiggle-genius/issues) on GitHub.
+- **Discussions**: For general questions and discussions, use the [GitHub Discussions](https://github.com/diegodscamara/jiggle-genius/discussions) tab.
+- **Documentation**: Check out our [Wiki](https://github.com/diegodscamara/jiggle-genius/wiki) for additional documentation.
+
+### Stay Updated
+
+- Star the repository to show your support and stay updated
+- Watch the repository for release notifications
+- Follow [@diegodscamara](https://github.com/diegodscamara) for project updates
+
+**Keep your computer awake with Jiggle Genius!** 🖱️✨

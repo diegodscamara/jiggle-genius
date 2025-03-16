@@ -14,8 +14,8 @@ jest.mock('robotjs', () => ({
 
 describe('JiggleGenius', () => {
   beforeEach(() => {
-    jest.spyOn(console, 'log').mockImplementation(() => {})
-    jest.spyOn(console, 'error').mockImplementation(() => {})
+    jest.spyOn(console, 'log').mockImplementation((): void => { /* no-op */ })
+    jest.spyOn(console, 'error').mockImplementation((): void => { /* no-op */ })
   })
 
   afterEach(() => {

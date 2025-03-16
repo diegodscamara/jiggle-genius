@@ -1,6 +1,6 @@
 {
   "name": "jiggle-genius",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Jiggle Genius is a simple and efficient mouse jiggler CLI tool designed to keep your computer awake during those times when you need it to stay active. Whether you're preventing your screen from locking during a presentation or keeping your online status active, Jiggle Genius has got you covered.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,6 +8,11 @@
   "bin": {
     "jiggle": "dist/index.js"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc",
     "prepare": "pnpm run build",
@@ -22,7 +27,13 @@
     "prebuild": "pnpm run clean",
     "predev": "pnpm run build",
     "format": "prettier --write \"src/**/*.ts\"",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "prepublishOnly": "pnpm run test && pnpm run lint && pnpm run build",
+    "preinstall": "node scripts/check-node-version.js"
+  },
+  "engines": {
+    "node": "^18.20.7",
+    "pnpm": ">=10.5.0"
   },
   "repository": {
     "type": "git",
@@ -33,7 +44,11 @@
     "jiggler",
     "cli",
     "automation",
-    "utility"
+    "utility",
+    "screen",
+    "awake",
+    "prevent-sleep",
+    "mouse-movement"
   ],
   "author": "Diego Camara <diegodscamara@gmail.com>",
   "license": "MIT",
@@ -43,7 +58,8 @@
   "homepage": "https://github.com/diegodscamara/jiggle-genius#readme",
   "dependencies": {
     "robotjs": "^0.6.0",
-    "yargs": "^17.7.2"
+    "yargs": "^17.7.2",
+    "semver": "^7.5.4"
   },
   "devDependencies": {
     "@types/jest": "^29.5.0",
@@ -58,11 +74,7 @@
     "rimraf": "^5.0.0",
     "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1",
-    "typescript": "^5.2.2"
-  },
-  "engines": {
-    "node": "^18.20.7",
-    "pnpm": ">=10.5.0"
+    "typescript": "~5.1.6"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
